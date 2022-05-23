@@ -1,0 +1,26 @@
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 15px;
+  margin-right: 20px;
+  margin-top: 15px;
+  &:hover {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .active {
+    background-color: rgb(202, 194, 194);
+    font-weight: 500;
+  }
+  span {
+    width: 21px;
+    font-size: 21px;
+  }
+  .item-title {
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}

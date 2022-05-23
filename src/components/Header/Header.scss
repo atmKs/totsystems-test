@@ -1,0 +1,34 @@
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  padding: 10px;
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+  .header-search {
+    display: flex;
+    flex: 0.7;
+    .search-area {
+      background-color: whitesmoke;
+      border-radius: 10px;
+      display: flex;
+      flex: 0.7;
+      input {
+        border: 0;
+        background: transparent;
+        outline: 0;
+        flex: 1;
+        font-size: 15px;
+      }
+    }
+    .header-account {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
