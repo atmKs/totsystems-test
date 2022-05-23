@@ -16,10 +16,18 @@ const EmailItem = () => {
           <DeleteIcon></DeleteIcon>
         </IconButton>
       </div>
-      <div className="email-info">dsds</div>
+      <div className="email-info">udusad222@mail.ru</div>
       <div className="email-message">
-        lore 3dsadsa d - lorem3dsdsadsds sda dsa dsa ease aw ew ew ea ewa ewa
-        ewa{' '}
+        <p>
+          <b>ЫВФВыФВ ыфв ыфв ыфв ыфв ыфвы фв ыф</b>
+          <span>
+            dsaddsadss dad sad sad sad sad sad d d sad sad sad sadd sa
+            dsaddsadss dad sad sad sad sad sad d d sad sad sad sadd sa
+            dsaddsadss dad sad sad sad sad sad d d sad sad sad sadd sa
+            dsaddsadss dad sad sad sad sad sad d d sad sad sad sadd sa
+            dsaddsadss dad sad sad sad sad sad d d sad sad sad sadd sa
+          </span>
+        </p>
       </div>
       <div className="email-data">21.05.2022</div>
     </div>

@@ -1,5 +1,35 @@
 .email-wrapper {
   display: grid;
-  grid-template-columns: 200px 100px auto 100px;
-  height: 40px;
+  grid-template-columns: 170px 200px auto 100px;
+  height: 60px;
+  &:first-child {
+    border-top: none;
+  }
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  .email-icons {
+    display: flex;
+    align-items: center;
+  }
+  .email-info {
+    display: flex;
+    align-items: center;
+  }
+  .email-message {
+    display: flex;
+    align-items: center;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 1000px;
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+  .email-data {
+    display: flex;
+    align-items: center;
+  }
 }
