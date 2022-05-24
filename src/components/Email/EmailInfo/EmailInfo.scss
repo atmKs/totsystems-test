@@ -5,10 +5,42 @@
   margin-top: 25px;
 
   .email-info-subject {
-    p {
-      position: relative;
-      font-size: 20px;
+    display: flex;
+    h2 {
+      font-size: 24px;
     }
-    border-bottom: 1px solid whitesmoke;
+    .subject-type {
+      margin: 28px 0 0 16px;
+      background: whitesmoke;
+      border-radius: 5px;
+      font-size: 13px;
+      height: 20px;
+    }
+    border-bottom: 1px solid rgb(202, 198, 198);
+  }
+  .email-info-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(202, 198, 198);
+    .author-profile {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .email-info-date {
+    margin-right: 20px;
+  }
+  .email-info-massage {
+    margin-top: 15px;
+    p {
+      margin-right: 15px;
+    }
   }
 }
