@@ -4,9 +4,12 @@ export const createFolder = (folder) => ({
   folder,
 });
 
-export const deleteFolder = (id) => ({ type: ActionTypes.DELETE_FOLDER, id });
-export const updateFolder = (folder, id) => ({
+export const deleteFolder = (currentId) => ({
+  type: ActionTypes.DELETE_FOLDER,
+  currentId,
+});
+export const updateFolder = (currentId, folder) => ({
   type: ActionTypes.UPDATE_USER,
+  currentId,
   folder,
-  id,
 });

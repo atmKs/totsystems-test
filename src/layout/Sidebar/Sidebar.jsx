@@ -43,7 +43,12 @@ const Sidebar = () => {
           <Form.Control
             type="text"
             placeholder="Создать папку"
-            {...register('title', { pattern: { value: /[A-Za-z0-9]/ } })}
+            {...register('title', {
+              required: true,
+              minLength: 4,
+              maxLength: 15,
+              pattern: /[A-Za-z0-9]/,
+            })}
           />
           <Button
             variant="contained"

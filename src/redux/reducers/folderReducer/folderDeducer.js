@@ -20,10 +20,29 @@ const folderReducer = (state = initialState, action) => {
           ...state.folders,
           {
             id: Math.random(),
-            title: title,
+            title,
             isEdit: true,
           },
         ],
+      };
+
+    case ActionTypes.DELETE_FOLDER:
+      return {
+        ...state,
+        folders: state.folders.filter(
+          (folder) => folder.id !== action.currentId
+        ),
+      };
+
+    case ActionTypes.UPDATE_FOLDER:
+      return {
+        ...state,
+        folders: state.folders.map((folder) => {
+          const { currentId } = action,
+            title = action.folder.title;
+          if (folder.id === currentId) return { id: currentId, title };
+          return folder;
+        }),
       };
 
     default:
