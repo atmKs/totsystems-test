@@ -3,6 +3,6 @@ import folderReducer from './folderReducer/folderDeducer';
 import emailReducer from './emailReducer/emailReducer';
 const rootReducers = combineReducers({
   folderItems: folderReducer,
-  // emailItems: emailReducer,
+  emailItems: emailReducer,
 });
 export default rootReducers;

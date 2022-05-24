@@ -1,14 +1,23 @@
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebar/Sidebar';
-import EmailList from './components/EmailList/EmailList';
+import { Routes, Route } from 'react-router-dom';
+import Header from './layout/Header/Header';
+import Sidebar from './layout/Sidebar/Sidebar';
+import EmailList from './components/Email/EmailList/EmailList';
+import Homepage from './components/Homepage/Homepage';
+import EmailInfo from './components/Email/EmailInfo/EmailInfo';
+
 import './App.scss';
+
 const App = () => {
   return (
     <div className="App">
-      <Header></Header>
+      <Header />
       <div className="main">
-        <Sidebar></Sidebar>
-        <EmailList></EmailList>
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/folder/:id" element={<EmailList />} />
+          <Route path="/email/:id" element={<EmailInfo />} />
+        </Routes>
       </div>
     </div>
   );

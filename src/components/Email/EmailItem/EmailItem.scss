@@ -1,10 +1,16 @@
 .email-wrapper {
   display: grid;
-  grid-template-columns: 170px 200px auto 100px;
+  grid-template-columns: 170px 200px auto 120px;
   height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(227, 238, 238);
+  }
   &:first-child {
     border-top: none;
   }
+
   border-top: 1px solid whitesmoke;
   border-bottom: 1px solid whitesmoke;
   .email-icons {
@@ -25,10 +31,11 @@
       max-width: 1000px;
       span {
         margin-left: 20px;
+        color: rgb(151, 151, 151);
       }
     }
   }
-  .email-data {
+  .email-date {
     display: flex;
     align-items: center;
   }

@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import CreateIcon from '@mui/icons-material/Create';
-import SidebarItem from '../SidebarItem/SidebarItem';
+import SidebarItem from './SidebarItem/SidebarItem';
 import { useSelector } from 'react-redux';
 import { foldersSelector } from '../../redux/slectors/selectors';
 import './Sidebar.scss';
@@ -17,7 +17,7 @@ const Sidebar = () => {
         Написать письмо
       </Button>
       {folders.map((folder) => (
-        <SidebarItem key={folder.id} folder={folder}></SidebarItem>
+        <SidebarItem key={folder.id} folder={folder} />
       ))}
     </div>
   );

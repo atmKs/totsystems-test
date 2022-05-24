@@ -1,15 +1,16 @@
-import ReorderIcon from '@mui/icons-material/Reorder';
 import { IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import './Header.scss';
 const Header = () => {
   return (
     <header className="top-nav">
       <div className="header-logo">
-        <IconButton>
-          <ReorderIcon></ReorderIcon>
-        </IconButton>
+        <p>
+          T<RadioButtonUncheckedIcon color="primary"></RadioButtonUncheckedIcon>
+          T
+        </p>
+        <span>Systems</span>
       </div>
 
       <div className="header-search">
