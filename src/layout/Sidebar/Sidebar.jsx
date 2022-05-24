@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
-import { AddIcon, CreateIcon } from '@mui/icons-material';
+import CreateIcon from '@mui/icons-material/Create';
+import AddIcon from '@mui/icons-material/Add';
 import SidebarItem from './SidebarItem/SidebarItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { foldersSelector } from '../../redux/slectors/selectors';

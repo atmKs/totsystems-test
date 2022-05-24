@@ -1,5 +1,7 @@
 import { IconButton } from '@mui/material';
-import { SearchIcon, RadioButtonUncheckedIcon } from '@mui/icons-material';
+import SearchIcon from '@mui/icons-material/Search';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+
 import './Header.scss';
 const Header = () => {
   return (
