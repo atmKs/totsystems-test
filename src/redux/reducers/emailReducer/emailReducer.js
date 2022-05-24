@@ -4,7 +4,7 @@ const initialState = {
       id: 1,
       folderId: 1,
       folderType: 'Входящие',
-      author: 'sega@mail.ru',
+      author: 'saddaa_3232@mail.ru',
       subject: 'testove zadamie test',
       message:
         'Labore non voluptate fugiat commodo sunt. Aute nisi sunt occaecat eiusmod consequat minim sit ut Lorem irure mollit quis. Elit laborum esse ullamco Lorem. Ipsum commodo officia in labore fugiat in. Nisi tempor magna cupidatat cillum magna officia ad sint qui sit aliqua nulla occaecat commodo. Magna sit occaecat labore fugiat culpa ut non Lorem et consequat velit id',
@@ -14,7 +14,7 @@ const initialState = {
       id: 2,
       folderId: 1,
       folderType: 'Входящие',
-      author: 'mega@mail.ru',
+      author: 'al862@yopmail.com',
       subject: 'testove zadamie test',
       message:
         'Consequat minim excepteur cupidatat duis consequat. Lorem incididunt ullamco irure adipisicing consequat enim ipsum nulla ullamco. Anim excepteur laborum minim eu officia Lorem consectetur sint sunt fugiat voluptate. Cillum tempor cillum id mollit minim minim proident tempor sint irure. Duis elit deserunt tempor nulla irure ex laborum occaecat id pariatur sint voluptate minim. Excepteur cupidatat est eu sit voluptate aliqua cupidatat occaecat et eu cupidatat commodo. Qui ad veniam anim do cillum eiusmod Lorem.',
@@ -24,7 +24,7 @@ const initialState = {
       id: 3,
       folderId: 1,
       folderType: 'Входящие',
-      author: 'draive@mail.ru',
+      author: 'qua3450@yopil.com',
       subject: 'testove zadamie test',
       message:
         'Est pariatur aute pariatur duis exercitation dolore ipsum. Deserunt in tempor duis cupidatat proident sunt adipisicing. Ea incididunt dolore commodo consequat deserunt elit culpa magna nostrud in esse. Est ullamco eu tempor laboris tempor magna eu ut ullamco magna culpa reprehenderit. Do excepteur officia adipisicing nostrud nulla aute in ut voluptate dolor. Ullamco reprehenderit magna labore eiusmod.',
@@ -44,7 +44,7 @@ const initialState = {
       id: 5,
       folderId: 2,
       folderType: 'Отправленные',
-      author: '222@mail.ru',
+      author: 'wupe-3690@yopmail.com',
       subject: 'testove zadamie test',
       message:
         'Esse commodo dolore aliquip amet veniam ullamco labore nisi officia non officia duis. Nisi ad quis laboris dolore velit incididunt fugiat fugiat. Proident esse aliquip consectetur aute ut aute tempor. Cillum eiusmod irure ea aliqua qui aliqua nulla pariatur eu exercitation ut id. Pariatur ea excepteur cillum enim cillum laboris culpa dolore consectetur dolor. Qui pariatur Lorem sint duis minim consectetur elit Lorem enim officia minim.',
@@ -53,7 +53,7 @@ const initialState = {
     {
       id: 6,
       folderId: 2,
-      author: '333@mail.ru',
+      author: 'equei-9051@yopmail.com',
       folderType: 'Отправленные',
       subject: 'testove zadamie test',
       message:
@@ -64,7 +64,7 @@ const initialState = {
       id: 7,
       folderId: 2,
       folderType: 'Отправленные',
-      author: '444@mail.ru',
+      author: 'equei-9051@yopmail.com',
       subject: 'testove zadamie test',
       message:
         'Velit nulla consectetur ut incididunt excepteur irure qui excepteur. Ipsum in aliqua ullamco Lorem fugiat sint pariatur anim ad cillum ut fugiat occaecat cupidatat. Cillum pariatur eu est quis dolor cupidatat elit elit non nulla pariatur ex nulla ut. Esse enim eu reprehenderit fugiat mollit tempor sunt occaecat aute exercitation. Nostrud ad irure anim do.',
@@ -74,7 +74,7 @@ const initialState = {
       id: 8,
       folderId: 2,
       folderType: 'Отправленные',
-      author: '555@mail.ru',
+      author: 'e43ei-9051@yopmail.com',
       subject: 'testove zadamie test',
       message:
         'Amet dolore qui exercitation esse in magna ex proident. Consequat qui velit commodo sint consectetur ex elit elit mollit mollit velit. Eu sit eiusmod non id sunt eu non sunt consectetur cillum. Proident elit ex anim sunt anim.',

@@ -3,6 +3,7 @@ import EmailItem from '../EmailItem/EmailItem';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { emailsSelector } from '../../../redux/slectors/selectors';
+
 import './EmailList.scss';
 
 const EmailList = () => {
@@ -16,6 +17,7 @@ const EmailList = () => {
           <EmailItem email={email} key={email.id}></EmailItem>
         ))}
       </div>
+      <div></div>
     </div>
   );
 };

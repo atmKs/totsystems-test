@@ -13,15 +13,15 @@ const initialState = {
 const folderReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.CREATE_FOLDER:
-      const { title, isEdit } = action.folder;
+      const { title } = action.folder;
       return {
         ...state,
-        filders: [
+        folders: [
           ...state.folders,
           {
             id: Math.random(),
-            title,
-            isEdit,
+            title: title,
+            isEdit: true,
           },
         ],
       };

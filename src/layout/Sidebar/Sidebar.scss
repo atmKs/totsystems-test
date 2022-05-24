@@ -8,4 +8,22 @@
     padding: 10px 20px;
     border-radius: 10px;
   }
+  .form {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 300px;
+    .form-control {
+      border: 1px solid whitesmoke;
+      border-radius: 10px;
+      background: whitesmoke;
+      outline: 0;
+      padding: 5px;
+      height: 26px;
+      font-size: 14px;
+    }
+    .add-btn {
+      margin: 20px 0 20px 10px;
+      border-radius: 10px;
+    }
+  }
 }

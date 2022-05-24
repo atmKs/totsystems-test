@@ -9,8 +9,9 @@ import './EmailItem.scss';
 const EmailItem = ({ email }) => {
   const navigate = useNavigate();
   const { id, author, subject, message, date } = email;
+
   return (
-    <div className="email-wrapper" onClick={() => navigate(`/email/${id}`)}>
+    <div className="email-wrapper">
       <div className="email-icons">
         <Checkbox />
         <IconButton>
@@ -21,7 +22,7 @@ const EmailItem = ({ email }) => {
         </IconButton>
       </div>
       <div className="email-info">{author}</div>
-      <div className="email-message">
+      <div className="email-message" onClick={() => navigate(`/email/${id}`)}>
         <p>
           <b>{subject}</b>
           <span>{message}</span>
