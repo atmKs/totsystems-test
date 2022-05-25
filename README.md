@@ -4,9 +4,11 @@
 
 ## Запуск
 
-git clone https://github.com/atmKs/totsystems-test.git
-npm i, если будет ошибка версий то npm i --legacy-peer-deps
-npm start
+-git clone https://github.com/atmKs/totsystems-test.git
+
+-npm i, если будет ошибка версий то npm i --legacy-peer-deps
+
+-npm start
 
 ## Реализованно 
 - Отображение списка писем в таличном виде
