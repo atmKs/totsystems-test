@@ -1,5 +1,4 @@
 import React from 'react';
-import { Checkbox } from '@mui/material';
 import { IconButton } from '@mui/material';
 import ReportIcon from '@mui/icons-material/Report';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -33,7 +32,6 @@ const EmailItem = ({ email }) => {
   return (
     <div className={!noReading ? 'email-wrapper read' : 'email-wrapper  no-read'}>
       <div className="email-icons">
-        <Checkbox />
         <IconButton onClick={() => onSpam(id)}>
           <ReportIcon></ReportIcon>
         </IconButton>
