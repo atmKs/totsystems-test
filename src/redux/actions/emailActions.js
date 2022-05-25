@@ -8,3 +8,8 @@ export const spamEmail = (currentId) => ({
   type: ActionTypes.SPAM_EMAIL,
   currentId,
 });
+
+export const searchEmail = (text) => ({
+  type: ActionTypes.SEARCH_EMAIL,
+  text,
+});

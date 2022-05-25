@@ -17,7 +17,7 @@ const Sidebar = () => {
       <Button
         variant="contained"
         className="btn"
-        color="secondary"
+        color="primary"
         endIcon={<CreateIcon />}
       >
         Написать письмо
@@ -28,13 +28,14 @@ const Sidebar = () => {
 
       <Button
         variant="contained"
-        color="secondary"
-        type="submit"
-        className="add-btn"
+        className="btn"
+        color="primary"
+        endIcon={<AddIcon />}
         onClick={() => dispatch(openModal(true))}
       >
-        <AddIcon></AddIcon>
+        Новая папка
       </Button>
+
       <ModalComponent modalActive={modalActive} />
     </div>
   );

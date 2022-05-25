@@ -21,6 +21,10 @@ const EmailItem = ({ email }) => {
     dispatch(spamEmail(id));
   };
 
+  const openEmail = () =>{
+    
+  }
+
   return (
     <div className="email-wrapper">
       <div className="email-icons">
