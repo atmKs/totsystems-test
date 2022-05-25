@@ -6,18 +6,29 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { useNavigate } from 'react-router-dom';
 
 import './EmailItem.scss';
+import { useDispatch } from 'react-redux';
+import { deleteEmail, spamEmail } from '../../../redux/actions/emailActions';
 const EmailItem = ({ email }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { id, author, subject, message, date } = email;
+
+  const onDelete = (id) => {
+    dispatch(deleteEmail(id));
+  };
+
+  const onSpam = (id) => {
+    dispatch(spamEmail(id));
+  };
 
   return (
     <div className="email-wrapper">
       <div className="email-icons">
         <Checkbox />
-        <IconButton>
+        <IconButton onClick={() => onSpam(id)}>
           <ReportIcon></ReportIcon>
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => onDelete(id)}>
           <DeleteIcon></DeleteIcon>
         </IconButton>
       </div>

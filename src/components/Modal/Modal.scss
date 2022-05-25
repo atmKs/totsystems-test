@@ -1,0 +1,12 @@
+@import '~bootstrap/scss/bootstrap';
+.form {
+  .form-control {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    background: whitesmoke;
+    outline: 0;
+    padding: 5px;
+    height: 30px;
+    font-size: 14px;
+  }
+}

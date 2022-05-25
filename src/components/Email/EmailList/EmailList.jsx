@@ -14,7 +14,7 @@ const EmailList = () => {
     <div className="email-list">
       <div className="email-container">
         {folderEmails.map((email) => (
-          <EmailItem email={email} key={email.id}></EmailItem>
+          <EmailItem email={email} key={email.id} />
         ))}
       </div>
       <div></div>

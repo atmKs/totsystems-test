@@ -8,22 +8,29 @@ const initialState = {
     { id: 4, title: 'Удаленные', icon: 'delete', isEdit: false },
     { id: 5, title: 'Спам', icon: 'report', isEdit: false },
   ],
+
+  currentFolder: null,
+  modalActive: false,
 };
 
 const folderReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.CREATE_FOLDER:
+      let i = state.folders.length
+        ? state.folders[state.folders.length - 1].id
+        : 0;
       const { title } = action.folder;
       return {
         ...state,
         folders: [
           ...state.folders,
           {
-            id: Math.random(),
+            id: ++i,
             title,
             isEdit: true,
           },
         ],
+        modalActive: false,
       };
 
     case ActionTypes.DELETE_FOLDER:
@@ -32,6 +39,7 @@ const folderReducer = (state = initialState, action) => {
         folders: state.folders.filter(
           (folder) => folder.id !== action.currentId
         ),
+        modalActive: false,
       };
 
     case ActionTypes.UPDATE_FOLDER:
@@ -40,9 +48,31 @@ const folderReducer = (state = initialState, action) => {
         folders: state.folders.map((folder) => {
           const { currentId } = action,
             title = action.folder.title;
-          if (folder.id === currentId) return { id: currentId, title };
+          if (folder.id === currentId)
+            return { id: currentId, title, isEdit: true };
           return folder;
         }),
+        modalActive: false,
+        currentFolder: null,
+      };
+
+    case ActionTypes.SET_CURRENT_FOLDER:
+      return {
+        ...state,
+        currentFolder: action.currentFolder,
+        modalActive: true,
+      };
+
+    case ActionTypes.OPEN_MODAL:
+      return {
+        ...state,
+        modalActive: action.modalAction,
+      };
+
+    case ActionTypes.CLOSE_MODAL:
+      return {
+        ...state,
+        modalActive: !action.modalAction,
       };
 
     default:

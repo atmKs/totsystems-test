@@ -3,24 +3,15 @@ import CreateIcon from '@mui/icons-material/Create';
 import AddIcon from '@mui/icons-material/Add';
 import SidebarItem from './SidebarItem/SidebarItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { foldersSelector } from '../../redux/slectors/selectors';
-import { Form } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
-
-import { createFolder } from '../../redux/actions/foldersAction';
-
+import { foldersSelector, modalSelector } from '../../redux/slectors/selectors';
+import { openModal } from '../../redux/actions/foldersAction';
 import './Sidebar.scss';
+import ModalComponent from '../../components/Modal/Modal';
 
 const Sidebar = () => {
   const folders = useSelector(foldersSelector);
-  const disptatch = useDispatch();
-  const { reset, handleSubmit, register } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    disptatch(createFolder(data));
-
-    reset();
-  };
+  const modalActive = useSelector(modalSelector);
+  const dispatch = useDispatch();
   return (
     <div className="sidebar">
       <Button
@@ -34,32 +25,17 @@ const Sidebar = () => {
       {folders.map((folder) => (
         <SidebarItem key={folder.id} folder={folder} />
       ))}
-      <div className="form">
-        <Form
-          onSubmit={handleSubmit((data) => {
-            onSubmit(data);
-          })}
-        >
-          <Form.Control
-            type="text"
-            placeholder="Создать папку"
-            {...register('title', {
-              required: true,
-              minLength: 4,
-              maxLength: 15,
-              pattern: /[A-Za-z0-9]/,
-            })}
-          />
-          <Button
-            variant="contained"
-            color="secondary"
-            type="submit"
-            className="add-btn"
-          >
-            <AddIcon></AddIcon>
-          </Button>
-        </Form>
-      </div>
+
+      <Button
+        variant="contained"
+        color="secondary"
+        type="submit"
+        className="add-btn"
+        onClick={() => dispatch(openModal(true))}
+      >
+        <AddIcon></AddIcon>
+      </Button>
+      <ModalComponent modalActive={modalActive} />
     </div>
   );
 };

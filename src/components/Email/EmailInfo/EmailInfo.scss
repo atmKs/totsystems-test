@@ -8,9 +8,10 @@
     display: flex;
     h2 {
       font-size: 24px;
+      margin-left: 5px;
     }
     .subject-type {
-      margin: 28px 0 0 16px;
+      margin: 7px 0 0 11px;
       background: whitesmoke;
       border-radius: 5px;
       font-size: 13px;
@@ -36,11 +37,14 @@
   }
   .email-info-date {
     margin-right: 20px;
+    .date {
+      margin-top: 20px;
+    }
   }
   .email-info-massage {
     margin-top: 15px;
-    p {
-      margin-right: 15px;
+    .message {
+      margin-left: 15px;
     }
   }
 }

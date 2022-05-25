@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="top-nav">
       <div className="header-logo">
-        <p>
+        <p className='header-logo-text'>
           T<RadioButtonUncheckedIcon color="primary"></RadioButtonUncheckedIcon>
           T
         </p>

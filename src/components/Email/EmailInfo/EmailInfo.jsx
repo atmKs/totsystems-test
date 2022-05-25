@@ -26,7 +26,7 @@ const EmailInfo = () => {
         </div>
 
         <div className="email-info-date">
-          <p>{date}</p>
+          <p className="date">{date}</p>
         </div>
       </div>
       <div className="email-info-massage">
