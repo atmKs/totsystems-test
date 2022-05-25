@@ -7,6 +7,7 @@ import { foldersSelector, modalSelector } from '../../redux/slectors/selectors';
 import { openModal } from '../../redux/actions/foldersAction';
 import './Sidebar.scss';
 import ModalComponent from '../../components/Modal/Modal';
+import React from 'react';
 
 const Sidebar = () => {
   const folders = useSelector(foldersSelector);

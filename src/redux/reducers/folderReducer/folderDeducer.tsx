@@ -1,6 +1,7 @@
-import { ActionTypes } from '../../actionTypes';
+import { FolderState } from '../../../types/Interfaces/foldersInterface';
+import { ActionTypes, FolderAndEmailActions } from '../../actionTypes';
 
-const initialState = {
+const initialState: FolderState = {
   folders: [
     { id: 1, title: 'Входящие', icon: 'arrow_forward_ios', isEdit: false },
     { id: 2, title: 'Отправленные', icon: 'outgoing_mail', isEdit: false },
@@ -13,7 +14,7 @@ const initialState = {
   modalActive: false,
 };
 
-const folderReducer = (state = initialState, action) => {
+const folderReducer = (state = initialState, action: FolderAndEmailActions) => {
   switch (action.type) {
     case ActionTypes.CREATE_FOLDER:
       let i = state.folders.length

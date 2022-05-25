@@ -1,5 +1,6 @@
-import { ActionTypes } from '../../actionTypes';
-const initialState = {
+import { EmailState } from '../../../types/Interfaces/emailInterface';
+import { ActionTypes, FolderAndEmailActions } from '../../actionTypes';
+const initialState: EmailState = {
   emails: [
     {
       id: 1,
@@ -132,7 +133,7 @@ const initialState = {
   searchText: '',
 };
 
-const emailReducer = (state = initialState, action) => {
+const emailReducer = (state = initialState, action: FolderAndEmailActions) => {
   switch (action.type) {
     case ActionTypes.DELETE_EMAIL:
       return {

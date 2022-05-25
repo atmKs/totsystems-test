@@ -8,7 +8,7 @@ const EmailInfo = () => {
   const { id } = useParams();
   const emails = useSelector(emailsSelector);
   const [{ author, message, subject, date, folderType }] = emails.filter(
-    (email) => email.id === Number(id)
+    (email: { id: number; }) => email.id === Number(id)
   );
 
   return (

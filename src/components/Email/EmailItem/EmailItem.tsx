@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { IconButton } from '@mui/material';
 import ReportIcon from '@mui/icons-material/Report';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -11,26 +11,32 @@ import {
   spamEmail,
   readEmail,
 } from '../../../redux/actions/emailActions';
-const EmailItem = ({ email }) => {
+import { Email } from '../../../types/Interfaces/emailInterface';
+interface IEmailItem {
+  email: Email;
+}
+const EmailItem: FC<IEmailItem> = ({ email }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id, author, subject, message, date, noReading } = email;
 
-  const onDelete = (id) => {
+  const onDelete = (id: number) => {
     dispatch(deleteEmail(id));
   };
 
-  const onSpam = (id) => {
+  const onSpam = (id: number) => {
     dispatch(spamEmail(id));
   };
 
-  const openEmail = (id) => {
+  const openEmail = (id: number) => {
     dispatch(readEmail(id));
     navigate(`/email/${id}`);
   };
 
   return (
-    <div className={!noReading ? 'email-wrapper read' : 'email-wrapper  no-read'}>
+    <div
+      className={!noReading ? 'email-wrapper read' : 'email-wrapper  no-read'}
+    >
       <div className="email-icons">
         <IconButton onClick={() => onSpam(id)}>
           <ReportIcon></ReportIcon>
