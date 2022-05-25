@@ -10,6 +10,7 @@ const initialState = {
       message:
         'Labore non voluptate fugiat commodo sunt. Aute nisi sunt occaecat eiusmod consequat minim sit ut Lorem irure mollit quis. Elit laborum esse ullamco Lorem. Ipsum commodo officia in labore fugiat in. Nisi tempor magna cupidatat cillum magna officia ad sint qui sit aliqua nulla occaecat commodo. Magna sit occaecat labore fugiat culpa ut non Lorem et consequat velit id',
       date: '03.01.2022',
+      noReading: true,
     },
     {
       id: 2,
@@ -20,6 +21,7 @@ const initialState = {
       message:
         'Consequat minim excepteur cupidatat duis consequat. Lorem incididunt ullamco irure adipisicing consequat enim ipsum nulla ullamco. Anim excepteur laborum minim eu officia Lorem consectetur sint sunt fugiat voluptate. Cillum tempor cillum id mollit minim minim proident tempor sint irure. Duis elit deserunt tempor nulla irure ex laborum occaecat id pariatur sint voluptate minim. Excepteur cupidatat est eu sit voluptate aliqua cupidatat occaecat et eu cupidatat commodo. Qui ad veniam anim do cillum eiusmod Lorem.',
       date: '03.01.2022',
+      noReading: true,
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ const initialState = {
       message:
         'Est pariatur aute pariatur duis exercitation dolore ipsum. Deserunt in tempor duis cupidatat proident sunt adipisicing. Ea incididunt dolore commodo consequat deserunt elit culpa magna nostrud in esse. Est ullamco eu tempor laboris tempor magna eu ut ullamco magna culpa reprehenderit. Do excepteur officia adipisicing nostrud nulla aute in ut voluptate dolor. Ullamco reprehenderit magna labore eiusmod.',
       date: '03.01.2022',
+      noReading: true,
     },
     {
       id: 4,
@@ -40,6 +43,7 @@ const initialState = {
       message:
         'Laboris laboris excepteur elit Lorem nisi do magna officia consequat commodo sint nisi. Proident mollit officia aute Lorem ad irure occaecat duis dolor proident velit. Est sit occaecat labore sit dolore cupidatat eiusmod magna cillum nisi excepteur quis commodo occaecat. Labore commodo sunt enim qui in eu excepteur pariatur aliqua veniam. Exercitation sit amet dolor et. Ullamco ut minim cillum exercitation duis ut cillum minim proident fugiat quis aute mollit. Dolore minim exercitation qui commodo incididunt sit non.',
       date: '03.01.2022',
+      noReading: true,
     },
     {
       id: 5,
@@ -147,6 +151,14 @@ const emailReducer = (state = initialState, action) => {
           email.id === action.currentId
             ? { ...email, folderId: 5, folderType: 'Спам' }
             : email
+        ),
+      };
+
+    case ActionTypes.READ_EMAIL:
+      return {
+        ...state,
+        emails: state.emails.map((email) =>
+          email.id === action.currentId ? { ...email, noReading: false } : email
         ),
       };
 

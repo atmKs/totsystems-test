@@ -7,11 +7,15 @@ import { useNavigate } from 'react-router-dom';
 
 import './EmailItem.scss';
 import { useDispatch } from 'react-redux';
-import { deleteEmail, spamEmail } from '../../../redux/actions/emailActions';
+import {
+  deleteEmail,
+  spamEmail,
+  readEmail,
+} from '../../../redux/actions/emailActions';
 const EmailItem = ({ email }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { id, author, subject, message, date } = email;
+  const { id, author, subject, message, date, noReading } = email;
 
   const onDelete = (id) => {
     dispatch(deleteEmail(id));
@@ -21,12 +25,13 @@ const EmailItem = ({ email }) => {
     dispatch(spamEmail(id));
   };
 
-  const openEmail = () =>{
-    
-  }
+  const openEmail = (id) => {
+    dispatch(readEmail(id));
+    navigate(`/email/${id}`);
+  };
 
   return (
-    <div className="email-wrapper">
+    <div className={!noReading ? 'email-wrapper read' : 'email-wrapper  no-read'}>
       <div className="email-icons">
         <Checkbox />
         <IconButton onClick={() => onSpam(id)}>
@@ -37,7 +42,7 @@ const EmailItem = ({ email }) => {
         </IconButton>
       </div>
       <div className="email-info">{author}</div>
-      <div className="email-message" onClick={() => navigate(`/email/${id}`)}>
+      <div className="email-message" onClick={() => openEmail(id)}>
         <p>
           <b>{subject}</b>
           <span>{message}</span>

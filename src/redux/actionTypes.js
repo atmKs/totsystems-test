@@ -10,4 +10,5 @@ export const ActionTypes = {
   DELETE_EMAIL: '[Delete] Delete email',
   SPAM_EMAIL: '[Spam] Spam email',
   SEARCH_EMAIL: '[Search] Search email',
+  READ_EMAIL: '[Read] Read email',
 };

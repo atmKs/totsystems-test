@@ -13,3 +13,8 @@ export const searchEmail = (text) => ({
   type: ActionTypes.SEARCH_EMAIL,
   text,
 });
+
+export const readEmail = (currentId) => ({
+  type: ActionTypes.READ_EMAIL,
+  currentId,
+});

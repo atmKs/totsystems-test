@@ -59,7 +59,7 @@ const ModalComponent = ({ modalActive }) => {
               type="submit"
               className="d-flex mt-3 m-auto "
             >
-              {currentFolder ? 'Update' : 'Create'}
+              {currentFolder ? 'Изменить' : 'Создать'}
             </Button>
           </div>
         </Form>

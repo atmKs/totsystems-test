@@ -3,15 +3,18 @@
   grid-template-columns: 170px 220px auto 120px;
   height: 60px;
   border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 2px;
+
   cursor: pointer;
   &:hover {
-    background-color: rgb(227, 238, 238);
+    background-color: #0080ff1c;
   }
   &:first-child {
     border-top: none;
   }
 
-  border-top: 1px solid whitesmoke;
+  border-top: 1px solid rgb(255, 255, 255);
   border-bottom: 1px solid whitesmoke;
   .email-icons {
     display: flex;
@@ -40,4 +43,12 @@
     display: flex;
     align-items: center;
   }
+}
+
+.no-read {
+  background-color: rgb(236, 236, 236);
+}
+
+.read {
+  background-color: white;
 }
