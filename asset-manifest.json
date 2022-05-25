@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/totsystems-test/static/css/main.6da790f1.css",
-    "main.js": "/totsystems-test/static/js/main.8c8623da.js",
+    "main.css": "/totsystems-test/static/css/main.bbc36ca6.css",
+    "main.js": "/totsystems-test/static/js/main.3e4d11fe.js",
     "index.html": "/totsystems-test/index.html",
-    "main.6da790f1.css.map": "/totsystems-test/static/css/main.6da790f1.css.map",
-    "main.8c8623da.js.map": "/totsystems-test/static/js/main.8c8623da.js.map"
+    "main.bbc36ca6.css.map": "/totsystems-test/static/css/main.bbc36ca6.css.map",
+    "main.3e4d11fe.js.map": "/totsystems-test/static/js/main.3e4d11fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.6da790f1.css",
-    "static/js/main.8c8623da.js"
+    "static/css/main.bbc36ca6.css",
+    "static/js/main.3e4d11fe.js"
   ]
 }
